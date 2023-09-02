@@ -5,8 +5,6 @@ import "../styles/form-styles.css";
 import axios from "axios";
 import mongoose from "mongoose";
 
-const port = 5001;
-
 // interface IEditPracticeLogProps extends ParameterDecorator {
 //   _id: string;
 //   username: string;
@@ -198,7 +196,7 @@ export default class EditPracticeLog extends Component {
 
     try {
       const res = await axios.post(
-        `http://localhost:${port}/journalLogs/`,
+        `https://my-tennis-journal-d8d0b4b98cb4.herokuapp.com/journalLogs/`,
         journalLog
       );
       if (res.status === 200) {

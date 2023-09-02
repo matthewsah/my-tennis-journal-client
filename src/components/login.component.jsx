@@ -2,8 +2,6 @@ import React, { Component, Fragment } from "react";
 import "../styles/form-styles.css";
 import axios from "axios";
 
-const port = 5001;
-
 // interface ILoginProps extends ParameterDecorator {
 //   currentUser: string | undefined;
 //   changeUser: any;
@@ -103,7 +101,7 @@ export default class Login extends Component {
     };
 
     try {
-      const res = await axios.get(`http://localhost:${port}/users/login`, config);
+      const res = await axios.get(`https://my-tennis-journal-d8d0b4b98cb4.herokuapp.com/users/login`, config);
       if (res.status === 200) {
         console.log("success");
         await this.props.changeUser(this.state.username);
@@ -138,7 +136,7 @@ export default class Login extends Component {
     };
 
     try {
-      const res = await axios.post(`http://localhost:${port}/users/`, userInfo);
+      const res = await axios.post(`https://my-tennis-journal-d8d0b4b98cb4.herokuapp.com/users/`, userInfo);
       if (res.status === 200) {
         console.log("success");
       } else {

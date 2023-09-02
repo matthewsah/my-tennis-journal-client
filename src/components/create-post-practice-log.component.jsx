@@ -4,8 +4,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../styles/form-styles.css";
 import axios from "axios";
 
-const port = 5001;
-
 // interface IPostPracticeLogProps extends ParameterDecorator {
 //   currentUser: string | undefined;
 // }
@@ -176,7 +174,7 @@ export default class CreatePostPracticeLog extends Component {
 
     try {
       const res = await axios.post(
-        `http://localhost${port}/journalLogs/`,
+        `https://my-tennis-journal-d8d0b4b98cb4.herokuapp.com/journalLogs/`,
         journalLog
       );
       if (res.status === 200) {

@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import JournalLog from "./journal-log.component.jsx";
 import axios from "axios";
 
-const port = 5001;
-
-
 // interface ILogProps extends ParameterDecorator {
 //   currentUser: string | undefined;
 // }
@@ -35,7 +32,7 @@ export default class Logs extends Component {
         },
       };
 
-      let res = await axios.get(`http://localhost:${port}/journallogs/`, config);
+      let res = await axios.get(`https://my-tennis-journal-d8d0b4b98cb4.herokuapp.com/journallogs/`, config);
       // res.data.sort((d1: { date: string }, d2: { date: string }) => {
       res.data.sort((d1, d2) => {
         return (
@@ -55,7 +52,7 @@ export default class Logs extends Component {
         },
       };
 
-      res = await axios.get(`http://localhost:${port}/journallogs/`, config);
+      res = await axios.get(`https://my-tennis-journal-d8d0b4b98cb4.herokuapp.com/journallogs/`, config);
       res.data.sort((d1, d2) => {
         return (
           new Date(d2.date.slice(0, 10)).getTime() -

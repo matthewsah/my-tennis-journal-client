@@ -3,9 +3,6 @@ import EditPracticeLog from "./edit-practice-log.component.jsx";
 import "../styles/log-styles.css";
 import axios from "axios";
 
-const port =  5001;
-
-
 // interface IJournalLogProps extends ParameterDecorator {
 //   date: Date;
 //   focusItems: object;
@@ -34,7 +31,7 @@ export default class JournalLog extends Component {
 
   // private async deleteLog(id: string) {
   async deleteLog(id) {
-    await axios.delete(`http://localhost:${port}/journallogs/${id}`);
+    await axios.delete(`https://my-tennis-journal-d8d0b4b98cb4.herokuapp.com/journallogs/${id}`);
     window.location.reload();
   }
 
