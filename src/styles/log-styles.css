@@ -1,0 +1,19 @@
+.log-card {
+  background-color: #336699;
+  color: #fefff3;
+  border-radius: 6px;
+  flex-flow: row wrap;
+}
+
+.log-card-header {
+  background-color: #339966;
+  border-radius: 4px;
+}
+
+.a {
+  color: #fefff3;
+}
+
+.a:hover {
+  color: #336699;
+}
