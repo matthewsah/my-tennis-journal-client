@@ -65,7 +65,7 @@ export default class JournalLog extends Component {
           </div>
         </div>
 
-        {Object.keys(this.props.focusItems).length !== 0 ? (
+        {this.props.focusItems != null ? (
           <div className="d-flex w-100 log-card-body">
             <div className="col-lg-3 col-md-4 col-sm-5">
               <h5>Focus Items | Performance</h5>
