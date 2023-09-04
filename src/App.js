@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import Navbar from "./components/navbar.component.jsx";
@@ -19,10 +19,21 @@ function App() {
     console.log('currentUser:', currentUser)
   }
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Router> 
       <div className="container">
-      <Navbar currentUser={currentUser}/> 
+      <Navbar windowWidth={windowWidth} currentUser={currentUser}/> 
         <br/> 
         <Routes> 
           <Route path="/" exact element={<Logs currentUser={currentUser}/>} /> 

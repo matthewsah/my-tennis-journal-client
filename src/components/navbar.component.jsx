@@ -10,7 +10,8 @@ import "../styles/navbar.css";
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-dark bg-dark navbar-expand-sm">
+      <nav className="navbar navbar-dark bg-dark navbar-expand">
+        { this.props.windowWidth > 500 &&
         <Link to="/" className="navbar-brand">
           <img
             src="https://clipartix.com/wp-content/uploads/2016/10/Bouncing-tennis-ball-clipart-free-images.png"
@@ -18,7 +19,7 @@ export default class Navbar extends Component {
             alt="tennis-ball"
           />
           My Tennis Journal
-        </Link>
+        </Link>}
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav mr-auto">
             <li className="navbar-item">
