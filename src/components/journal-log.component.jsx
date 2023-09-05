@@ -40,7 +40,7 @@ export default class JournalLog extends Component {
       <div className="log-card d-flex w-100 p-4 mb-4">
         <div className="d-flex w-100 align-items-center mb-2 log-card-header p-2">
           <h4 className="log-card-date w-100 m-0">
-            Practice Log: {this.props.date.toString().slice(0, 10)}
+            {this.props.date.toString().slice(0, 10)}
           </h4>
           <div className="d-flex align-items-center">
             <a
@@ -67,7 +67,7 @@ export default class JournalLog extends Component {
 
         {this.props.focusItems != null ? (
           <div className="d-flex w-100 log-card-body">
-            <div className="col-lg-3 col-md-4 col-sm-5">
+            <div className="col-4">
               <h5>Focus Items | Performance</h5>
               {Object.keys(this.props.focusItems).map((key, _) => {
                 return (
@@ -79,7 +79,7 @@ export default class JournalLog extends Component {
               })}
             </div>
             <div className="col-1"></div>
-            <div className="col-lg-8 col-md-7 col-sm-6">
+            <div className="col-7">
               <h5>Reflection</h5>
               <p>{this.props.reflection}</p>
             </div>

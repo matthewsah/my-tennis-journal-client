@@ -17,3 +17,33 @@
 .a:hover {
   color: #336699;
 }
+
+/* add media query for when card gets smaller h5 */
+@media (max-width: 440px){
+  h4 {
+    font-size: 1.1rem !important;
+    font-weight: 700;
+  }
+
+  h5 {
+    font-size: 1rem !important;
+  }
+
+  p {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  h4 {
+    font-size: 1.3rem !important;
+  }
+
+  h5 {
+    font-size: 1.1rem !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+  }
+}
